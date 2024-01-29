@@ -12,4 +12,14 @@ namespace SchoolService.Pages ;
         {
             InitializeComponent();
         }
+
+        private async void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Home());
+        }
+
+        private async void RegisterButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Register());
+        }
     }

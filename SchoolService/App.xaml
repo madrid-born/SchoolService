@@ -1,6 +1,7 @@
 ﻿<?xml version = "1.0" encoding = "UTF-8" ?>
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
              xmlns:local="clr-namespace:SchoolService"
              x:Class="SchoolService.App">
     <Application.Resources>
@@ -9,6 +10,30 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Custom Entry for email and password -->
+            <Style x:Key="CustomEntry" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="PlaceholderColor" Value="Black" />
+                <Setter Property="TextColor" Value="#333333" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Margin" Value="10,10" />
+                <Setter Property="HeightRequest" Value="50" />
+            </Style>
+            
+            <!-- button -->
+            <Style TargetType="Button" x:Key="ButtonStyle">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="HeightRequest" Value="52" />
+                <Setter Property="Padding" Value="64,0" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="MediumFont" />
+                <Setter Property="CornerRadius" Value="26" />
+                <Setter Property="BackgroundColor" Value="#00C569" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="BorderColor" Value="Transparent" />
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
