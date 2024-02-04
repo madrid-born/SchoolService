@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SchoolService.Pages.School;
+using SchoolService.Pages.Worker;
 
 namespace SchoolService.Pages ;
 
@@ -13,13 +10,13 @@ namespace SchoolService.Pages ;
             InitializeComponent();
         }
 
-        private async void LoginButton_Clicked(object sender, EventArgs e)
+        private void WorkerButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Home());
+            Application.Current.MainPage = new NavigationPage(new WorkerLogin());
         }
 
-        private async void RegisterButton_Clicked(object sender, EventArgs e)
+        private void SchoolButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Register());
+            Application.Current.MainPage = new NavigationPage(new SchoolLogin());
         }
     }
