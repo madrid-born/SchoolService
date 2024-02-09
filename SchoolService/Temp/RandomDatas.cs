@@ -1,15 +1,15 @@
-﻿using SchoolService.Models;
+﻿﻿using SchoolService.Models;
 
 namespace SchoolService.Temp ;
 
     public class RandomDatas
     {
-        private static List<string> _personNames = new List<string>()
+        private static readonly List<string> PersonNames = new List<string>()
         {
             "Ali", "Reza", "mamad", "meiti", "aria", "dariush", "hashem", "saber"
         };
 
-        private static List<string> _jobTitle = new List<string>()
+        private static readonly List<string> JobTitle = new List<string>()
         {
             "Physical Therapist",
             "Environmental scientist",
@@ -23,22 +23,22 @@ namespace SchoolService.Temp ;
             "Urban Planner"
         };
 
-        private static List<string> _abilityTitle = new List<string>()
+        private static readonly List<string> AbilityTitle = new List<string>()
         {
             "printing", "vacuuming", "moping", "reading", "cleaning", "fixing", "talking",
         };
         
-        private static List<string> _suggestionTitle = new List<string>()
+        private static readonly List<string> SuggestionTitle = new List<string>()
         {
             "chize khafan", "chize sade", "chize ajib", "chize kool", "chize bahal",
         };
         
-        private static List<string> _suggestionDetail = new List<string>()
+        private static readonly List<string> SuggestionDetail = new List<string>()
         {
             "khafane", "sade'e", "ajibe", "koole", "bahale",
         };
         
-        private static List<string> _suggestionImplement = new List<string>()
+        private static readonly List<string> SuggestionImplement = new List<string>()
         {
             "jaye khafan", "jaye sade", "jaye ajib", "jaye kool", "jaye bahal", "hich ja",
         };
@@ -49,7 +49,7 @@ namespace SchoolService.Temp ;
             var result = new List<Ability>();
             for (int i = 0; i < num; i++)
             {
-                var name = _abilityTitle[random.Next(_abilityTitle.Count)];
+                var name = AbilityTitle[random.Next(AbilityTitle.Count)];
                 var level = random.Next(10);
                 var ability = new Ability(name, level);
                 result.Add(ability);
@@ -63,7 +63,7 @@ namespace SchoolService.Temp ;
             var result = new List<Job>();
             for (int i = 0; i < num; i++)
             {
-                var title = _jobTitle[random.Next(_jobTitle.Count)];
+                var title = JobTitle[random.Next(JobTitle.Count)];
                 var image = $"p{random.Next(1,18)}";
                 var wage = random.Next(10000, 100000);
                 wage -= wage % 1000;
@@ -79,7 +79,7 @@ namespace SchoolService.Temp ;
             var result = new List<Worker>();
             for (int i = 0; i < num; i++)
             {
-                var name = _personNames[random.Next(_personNames.Count)];
+                var name = PersonNames[random.Next(PersonNames.Count)];
                 var age = random.Next(18,35);
                 var worker = new Worker(name, age, AbilityGenerator(5));
                 var image = $"p{random.Next(1,18)}";
@@ -95,9 +95,9 @@ namespace SchoolService.Temp ;
             var result = new List<Suggestion>();
             for (int i = 0; i < num; i++)
             {
-                var title = _suggestionTitle[random.Next(_suggestionTitle.Count)];
-                var detail = _suggestionDetail[random.Next(_suggestionDetail.Count)];
-                var implemented = _suggestionImplement[random.Next(_suggestionImplement.Count)];
+                var title = SuggestionTitle[random.Next(SuggestionTitle.Count)];
+                var detail = SuggestionDetail[random.Next(SuggestionDetail.Count)];
+                var implemented = SuggestionImplement[random.Next(SuggestionImplement.Count)];
                 var suggestion = new Suggestion(title, detail, implemented);
                 suggestion.AddWorker(WorkerGenerator(1)[0]);
                 result.Add(suggestion);
