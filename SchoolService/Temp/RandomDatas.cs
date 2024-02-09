@@ -28,6 +28,21 @@ namespace SchoolService.Temp ;
             "printing", "vacuuming", "moping", "reading", "cleaning", "fixing", "talking",
         };
         
+        private static List<string> _suggestionTitle = new List<string>()
+        {
+            "chize khafan", "chize sade", "chize ajib", "chize kool", "chize bahal",
+        };
+        
+        private static List<string> _suggestionDetail = new List<string>()
+        {
+            "khafane", "sade'e", "ajibe", "koole", "bahale",
+        };
+        
+        private static List<string> _suggestionImplement = new List<string>()
+        {
+            "jaye khafan", "jaye sade", "jaye ajib", "jaye kool", "jaye bahal", "hich ja",
+        };
+        
         private static List<Ability> AbilityGenerator(int num)
         {
             var random = new Random();
@@ -68,6 +83,21 @@ namespace SchoolService.Temp ;
                 var age = random.Next(18,35);
                 var worker = new Worker(name, age, AbilityGenerator(5));
                 result.Add(worker);
+            }
+            return result;
+        }
+
+        public static List<Suggestion> WorkerSuggestion(int num)
+        {
+            var random = new Random();
+            var result = new List<Suggestion>();
+            for (int i = 0; i < num; i++)
+            {
+                var title = _suggestionTitle[random.Next(_suggestionTitle.Count)];
+                var detail = _suggestionDetail[random.Next(_suggestionDetail.Count)];
+                var implemented = _suggestionImplement[random.Next(_suggestionImplement.Count)];
+                var suggestion = new Suggestion(title, detail, implemented);
+                result.Add(suggestion);
             }
             return result;
         }

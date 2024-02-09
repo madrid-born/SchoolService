@@ -21,7 +21,7 @@
                         ColumnDefinitions="70,*"
                         ColumnSpacing="10">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="JobTappedeffege" CommandParameter="{Binding .}" />
+                            <TapGestureRecognizer Tapped="JobTapped" CommandParameter="{Binding .}" />
                         </Grid.GestureRecognizers>
                         <Image
                             HeightRequest="70"
