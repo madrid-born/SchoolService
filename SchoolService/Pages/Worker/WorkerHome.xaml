@@ -10,7 +10,6 @@
             
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout 
-           
                     Orientation="Vertical"
                     ItemSpacing="10"
                 />
@@ -22,7 +21,7 @@
                         ColumnDefinitions="70,*"
                         ColumnSpacing="10">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="JobTapped" CommandParameter="{Binding .}" />
+                            <TapGestureRecognizer Tapped="JobTappedeffege" CommandParameter="{Binding .}" />
                         </Grid.GestureRecognizers>
                         <Image
                             HeightRequest="70"
