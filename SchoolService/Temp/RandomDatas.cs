@@ -87,7 +87,7 @@ namespace SchoolService.Temp ;
             return result;
         }
 
-        public static List<Suggestion> WorkerSuggestion(int num)
+        public static List<Suggestion> SuggestionGenerator(int num)
         {
             var random = new Random();
             var result = new List<Suggestion>();

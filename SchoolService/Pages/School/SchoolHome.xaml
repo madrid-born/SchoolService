@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolService.Pages.School.SchoolHome">
+    <ContentPage.Content>
+        <ListView
+            x:Name="ListSuggestions"
+            ItemSelected="ListSuggestions_OnItemSelected"
+            ItemTapped="ListSuggestions_OnItemTapped"
+        >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            Padding="5"
+                            RowDefinitions="Auto"
+                            ColumnDefinitions="Auto , *"
+                            Margin="0 , 10 , 0 , 0"
+                        >
+                            <Image
+                                Source="{Binding worker.ImagePath}"
+                                HorizontalOptions="Start"
+                                WidthRequest="75"
+                                HeightRequest="75"
+                            />
+                            <Grid
+                                Grid.Column="1"
+                                RowDefinitions="Auto,Auto"
+                                Margin="10 , 0 , 0 , 0"
+                            >
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding title}" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding detail}" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.RowHeight>120</ListView.RowHeight>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolService.Pages.School.SuggestionPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.GestureRecognizers>
+                <SwipeGestureRecognizer
+                    Direction="Right"
+                    Swiped="SwipeGestureRecognizer_OnSwiped"
+                >
+                </SwipeGestureRecognizer>
+            </Grid.GestureRecognizers>
+            <StackLayout>
+                <Image x:Name ="ImagePath" Source="dotnet_bot.png" Grid.Row="0" WidthRequest="100" HeightRequest="100" />
+                <Label x:Name="Age" Text="" Grid.Row="1" />
+                <Label x:Name = "Exprience" Text="" Grid.Row="2" />
+                <!--<Label x:Name ="Field" Text="" Grid.Row="3" />-->
+                <Label x:Name="Title" Text="" Grid.Row="3" />
+                <Label x:Name ="Idea" Text="" Grid.Row="4" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
