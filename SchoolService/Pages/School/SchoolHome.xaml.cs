@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SchoolService.Models;
+using SchoolService.Temp;
 
 namespace SchoolService.Pages.School;
 
@@ -12,6 +13,7 @@ public partial class SchoolHome : ContentPage
     public SchoolHome()
     {
         InitializeComponent();
+        ListSuggestions.ItemsSource = RandomDatas.SuggestionGenerator(10);
     }
     
     private async void ListSuggestions_OnItemSelected(object sender, SelectedItemChangedEventArgs e)

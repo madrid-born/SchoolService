@@ -82,6 +82,8 @@ namespace SchoolService.Temp ;
                 var name = _personNames[random.Next(_personNames.Count)];
                 var age = random.Next(18,35);
                 var worker = new Worker(name, age, AbilityGenerator(5));
+                var image = $"p{random.Next(1,18)}";
+                worker.AddImage(image);
                 result.Add(worker);
             }
             return result;
@@ -97,6 +99,7 @@ namespace SchoolService.Temp ;
                 var detail = _suggestionDetail[random.Next(_suggestionDetail.Count)];
                 var implemented = _suggestionImplement[random.Next(_suggestionImplement.Count)];
                 var suggestion = new Suggestion(title, detail, implemented);
+                suggestion.AddWorker(WorkerGenerator(1)[0]);
                 result.Add(suggestion);
             }
             return result;

@@ -11,10 +11,10 @@ namespace SchoolService.Pages.School;
 public partial class SuggestionPage : ContentPage
 {
     public Suggestion Suggestion;
-    public SuggestionPage(Suggestion _Suggestion)
+    public SuggestionPage(Suggestion suggestion)
     {
         InitializeComponent();
-        Suggestion = _Suggestion;
+        Suggestion _Suggestion= suggestion;
         ImagePath.Source = ImageSource.FromFile(_Suggestion.Worker.ImagePath);
         Age.Text = _Suggestion.Worker.Age.ToString();
         Exprience.Text = _Suggestion.IdeaImplement;

@@ -19,4 +19,9 @@
         {
             Abilities.Add(ability);
         }
+        
+        public void AddImage(string imagePath)
+        {
+            ImagePath = imagePath;
+        }
     }

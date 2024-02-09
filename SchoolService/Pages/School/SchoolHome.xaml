@@ -19,7 +19,7 @@
                             Margin="0 , 10 , 0 , 0"
                         >
                             <Image
-                                Source="{Binding worker.ImagePath}"
+                                Source="{Binding Worker.ImagePath}"
                                 HorizontalOptions="Start"
                                 WidthRequest="75"
                                 HeightRequest="75"
@@ -30,8 +30,8 @@
                                 Margin="10 , 0 , 0 , 0"
                             >
                                 <VerticalStackLayout>
-                                    <Label Text="{Binding title}" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                                    <Label Text="{Binding detail}" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding Title}" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding Detail}" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
                                 </VerticalStackLayout>
                             </Grid>
                         </Grid>

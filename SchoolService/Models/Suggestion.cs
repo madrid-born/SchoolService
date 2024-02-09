@@ -15,4 +15,9 @@ public class Suggestion
         Detail = detail;
         IdeaImplement = ideaImplement;
     }
+
+    public void AddWorker(Worker worker)
+    {
+        Worker = worker;
+    }
 }
