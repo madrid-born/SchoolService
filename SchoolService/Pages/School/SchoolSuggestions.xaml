@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SchoolService.Pages.School.SchoolHome">
-    <ContentPage.Content>
+             x:Class="SchoolService.Pages.School.SchoolSuggestions">
+    <ContentPage Title="Tab1">
         <ListView
             x:Name="ListSuggestions"
             ItemSelected="ListSuggestions_OnItemSelected"
@@ -40,5 +40,5 @@
             </ListView.ItemTemplate>
             <ListView.RowHeight>120</ListView.RowHeight>
         </ListView>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
+</TabbedPage>
