@@ -1,4 +1,4 @@
-﻿﻿using SchoolService.Models;
+﻿using SchoolService.Models;
 
 namespace SchoolService.Temp ;
 
@@ -11,16 +11,7 @@ namespace SchoolService.Temp ;
 
         private static readonly List<string> JobTitle = new List<string>()
         {
-            "Physical Therapist",
-            "Environmental scientist",
-            "Mathematician",
-            "Secretary",
-            "Childcare worker",
-            "Construction Manager",
-            "Electrician",
-            "Interpreter & Translator",
-            "Paramedic",
-            "Urban Planner"
+            "Physical Therapist","Environmental scientist","Mathematician","Secretary","Childcare worker","Construction Manager","Electrician","Interpreter & Translator","Paramedic","Urban Planner"
         };
 
         private static readonly List<string> AbilityTitle = new List<string>()
@@ -42,7 +33,14 @@ namespace SchoolService.Temp ;
         {
             "jaye khafan", "jaye sade", "jaye ajib", "jaye kool", "jaye bahal", "hich ja",
         };
+
+        private static readonly List<string> TextMessages = new List<string>()
+        {
+            "Hey there", "how you doing", "what's up?", "will you give me any discount?", "where are you?", "come here and you will see", "will you do me a favor?", "will you come here?", " will you do the job?", "someone else took the job", "im sorry there is no way", "nothing seems good there", "show me the problem", "send me your address", "no way", "come on", "so do we have a deal", "i will do it", "show me the path", "thanks", "your welcome", "this is great", "that's not good"
+        };
         
+        // private static readonly List<>
+
         private static List<Ability> AbilityGenerator(int num)
         {
             var random = new Random();
@@ -101,6 +99,35 @@ namespace SchoolService.Temp ;
                 var suggestion = new Suggestion(title, detail, implemented);
                 suggestion.AddWorker(WorkerGenerator(1)[0]);
                 result.Add(suggestion);
+            }
+            return result;
+        }
+        
+        public static List<Message> MessageGenerator(int num)
+        {
+            var random = new Random();
+            var result = new List<Message>();
+            var booleans = new List<bool>() {true, false};
+            for (int i = 0; i < num; i++)
+            {
+                var text = TextMessages[random.Next(TextMessages.Count)];
+                var sender = booleans[random.Next(booleans.Count)];
+                var message = new Message(text, sender);
+                result.Add(message);
+            }
+            return result;
+        }
+        
+        public static List<Chat> ChatGenerator(int num)
+        {
+            var random = new Random();
+            var result = new List<Chat>();
+            for (int i = 0; i < num; i++)
+            {
+                var job = JobGenerator(1)[0];
+                var messages = MessageGenerator(10);
+                var chat = new Chat(job, messages);
+                result.Add(chat);
             }
             return result;
         }

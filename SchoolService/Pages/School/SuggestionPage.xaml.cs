@@ -34,7 +34,7 @@ public partial class SuggestionPage : ContentPage
             }
             catch (Exception exception)
             {
-                DisplayAlert("Error", exception.ToString(), "Ok");
+                await DisplayAlert("Error", exception.ToString(), "Ok");
                 throw;
             }
         }
