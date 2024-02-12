@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolService.Pages.School;
+﻿using SchoolService.Pages.School;
+using SchoolService.Pages.Worker.MainPages;
 
-namespace SchoolService.Pages.Worker ;
+namespace SchoolService.Pages.Worker.LoginRegisterPages ;
 
     public partial class WorkerLogin : ContentPage
     {

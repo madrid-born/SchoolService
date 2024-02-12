@@ -2,9 +2,10 @@
 
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SchoolService.Pages.Worker.WorkerHome"
+             x:Class="SchoolService.Pages.Worker.MainPages.WorkerHome"
              xmlns:local="clr-namespace:SchoolService.Pages.Worker"
              xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:mainPages="clr-namespace:SchoolService.Pages.Worker.MainPages"
              android:TabbedPage.ToolbarPlacement="Bottom"
              SelectedTabColor="#00C569"
              UnselectedTabColor="White"
@@ -12,10 +13,10 @@
 >
     
 
-    <local:WorkerOffers Title="Home" IconImageSource="NothingYet.svg" />
-    <local:WorkerChat Title="Chat" IconImageSource="NothingYet.svg"/>
-    <local:WorkerSearch Title="Search" IconImageSource="NothingYet.svg"/>
-    <local:WorkerJobs Title="Jobs" IconImageSource="NothingYet.svg"/>
-    <local:WorkerProfile Title="Profile" IconImageSource="NothingYet.svg"/>
+    <mainPages:WorkerOffers Title="Home" IconImageSource="NothingYet.svg" />
+    <mainPages:WorkerChat Title="Chat" IconImageSource="NothingYet.svg"/>
+    <mainPages:WorkerSearch Title="Search" IconImageSource="NothingYet.svg"/>
+    <mainPages:WorkerJobs Title="Jobs" IconImageSource="NothingYet.svg"/>
+    <mainPages:WorkerProfile Title="Profile" IconImageSource="NothingYet.svg"/>
     
 </TabbedPage>

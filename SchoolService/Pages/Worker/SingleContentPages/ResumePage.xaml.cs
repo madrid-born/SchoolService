@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolService.Pages.Worker ;
+namespace SchoolService.Pages.Worker.SingleContentPages ;
 
-    public partial class WorkerProfile : ContentPage
+    public partial class ResumePage : ContentPage
     {
-        public WorkerProfile()
+        public ResumePage()
         {
             InitializeComponent();
         }

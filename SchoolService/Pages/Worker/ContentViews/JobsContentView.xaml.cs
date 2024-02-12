@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolService.Models;
-using SchoolService.Temp;
+﻿using SchoolService.Models;
+using SchoolService.Pages.Worker.SingleContentPages;
 
-namespace SchoolService.Pages.Worker ;
+namespace SchoolService.Pages.Worker.ContentViews ;
 
-    public partial class WorkerOffers : ContentPage
+    public partial class JobsContentView : ContentView
     {
-        public WorkerOffers()
+        public JobsContentView(List<Job> jobs)
         {
             InitializeComponent();
-            JobData.ItemsSource = RandomDatas.JobGenerator(10);
+            JobData.ItemsSource = jobs;
         }
         
         private async void JobTapped(object sender, TappedEventArgs e)

@@ -1,7 +1,4 @@
-﻿using SchoolService.Models;
-using SchoolService.Temp;
-
-namespace SchoolService.Pages.Worker ;
+﻿namespace SchoolService.Pages.Worker.MainPages ;
 
     public partial class WorkerHome : TabbedPage
     {

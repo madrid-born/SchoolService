@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolService.Models;
+﻿using SchoolService.Models;
+using SchoolService.Pages.Worker.SingleContentPages;
 using SchoolService.Temp;
 
-namespace SchoolService.Pages.Worker ;
+namespace SchoolService.Pages.Worker.MainPages ;
 
     public partial class WorkerChat : ContentPage
     {

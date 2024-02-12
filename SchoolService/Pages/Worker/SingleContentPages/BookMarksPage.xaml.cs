@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolService.Pages.Worker ;
+namespace SchoolService.Pages.Worker.SingleContentPages ;
 
-    public partial class WorkerSearch : ContentPage
+    public partial class BookMarksPage : ContentPage
     {
-        public WorkerSearch()
+        public BookMarksPage()
         {
             InitializeComponent();
         }

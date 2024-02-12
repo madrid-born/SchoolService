@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolService.Models;
+﻿using SchoolService.Models;
 
-namespace SchoolService.Pages.Worker ;
+namespace SchoolService.Pages.Worker.SingleContentPages ;
 
     public partial class JobPage : ContentPage
     {

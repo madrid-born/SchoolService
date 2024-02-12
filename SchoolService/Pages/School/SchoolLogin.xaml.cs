@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SchoolService.Pages.Worker;
+using SchoolService.Pages.Worker.LoginRegisterPages;
 
 namespace SchoolService.Pages.School ;
 

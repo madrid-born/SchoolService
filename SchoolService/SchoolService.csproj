@@ -52,4 +52,87 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Worker\SingleContentPages\ChatPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\SingleContentPages\JobPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\ContentViews\JobsContentView.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\MainPages\WorkerChat.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\MainPages\WorkerHome.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\MainPages\WorkerJobs.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\LoginRegisterPages\WorkerLogin.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\LoginRegisterPages\WorkerRegister.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\MainPages\WorkerSearch.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\MainPages\WorkerOffers.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Worker\MainPages\WorkerProfile.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Worker\SingleContentPages\ChatPage.xaml.cs">
+	    <DependentUpon>ChatPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\SingleContentPages\JobPage.xaml.cs">
+	    <DependentUpon>JobPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\ContentViews\JobsContentView.xaml.cs">
+	    <DependentUpon>JobsContentView.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\MainPages\WorkerChat.xaml.cs">
+	    <DependentUpon>WorkerChat.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\MainPages\WorkerHome.xaml.cs">
+	    <DependentUpon>WorkerHome.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\MainPages\WorkerJobs.xaml.cs">
+	    <DependentUpon>WorkerJobs.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\LoginRegisterPages\WorkerLogin.xaml.cs">
+	    <DependentUpon>WorkerLogin.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\LoginRegisterPages\WorkerRegister.xaml.cs">
+	    <DependentUpon>WorkerRegister.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\MainPages\WorkerSearch.xaml.cs">
+	    <DependentUpon>WorkerSearch.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\MainPages\WorkerOffers.xaml.cs">
+	    <DependentUpon>WorkerOffers.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Pages\Worker\MainPages\WorkerProfile.xaml.cs">
+	    <DependentUpon>WorkerProfile.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
 ﻿using SchoolService.Pages.Worker;
+using SchoolService.Pages.Worker.LoginRegisterPages;
 
 namespace SchoolService.Pages.School ;
 
