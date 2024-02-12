@@ -41,6 +41,7 @@
                 <Setter Property="Padding" Value="64,0" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontFamily" Value="MediumFont" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
             </Style>
             
         </ResourceDictionary>
