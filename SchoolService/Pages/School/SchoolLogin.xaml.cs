@@ -17,7 +17,7 @@ namespace SchoolService.Pages.School ;
 
         private void LoginButton_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new SchoolSuggestions());
+            Application.Current.MainPage = new NavigationPage(new SchoolHome());
         }
 
         private void RegisterButton_Clicked(object sender, EventArgs e)

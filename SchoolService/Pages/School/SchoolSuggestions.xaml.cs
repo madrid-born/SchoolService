@@ -8,12 +8,12 @@ using SchoolService.Temp;
 
 namespace SchoolService.Pages.School;
 
-public partial class SchoolSuggestions : TabbedPage
+public partial class SchoolSuggestions : ContentPage
 {
     public SchoolSuggestions()
     {
         InitializeComponent();
-        LoadPages();
+        /*LoadPages();*/
         ListSuggestions.ItemsSource = RandomDatas.SuggestionGenerator(10);
     }
     
@@ -30,7 +30,7 @@ public partial class SchoolSuggestions : TabbedPage
         ListSuggestions.SelectedItem = null;
     }
 
-    private async Task LoadPages()
+    /*private async Task LoadPages()
     {
         await Task.Delay(100);
         Children.Add(new SchoolAdvertise());
@@ -42,5 +42,5 @@ public partial class SchoolSuggestions : TabbedPage
         Children.Add(new SchoolSuggestions());
         await Task.Delay(100);
         Children.Add(new SchoolNews());
-    }
+    }*/
 }

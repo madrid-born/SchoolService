@@ -41,7 +41,7 @@ namespace SchoolService.Temp ;
         
         // private static readonly List<>
 
-        private static List<Ability> AbilityGenerator(int num)
+        public static List<Ability> AbilityGenerator(int num)
         {
             var random = new Random();
             var result = new List<Ability>();
