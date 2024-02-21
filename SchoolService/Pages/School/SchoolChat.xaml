@@ -4,8 +4,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SchoolService.Pages.School.SchoolChat">
     <ContentPage.Content>
-        <Label
-            Text="SchoolChat"
-        ></Label>
+        <VerticalStackLayout>
+            <Label
+                x:Name="chatMessages"
+                Text="ChatMessages"
+                FontSize="18"
+                HorizontalOptions="Center"
+            ></Label>
+            <Entry
+                x:Name="MyChatMessage"
+                Placeholder="Type Here"
+                HorizontalOptions="Center"
+                >
+            </Entry>
+            <Button
+                x:Name="SendMessage"
+                Text="Send"
+                Clicked="SendMessage_OnClicked"
+                HorizontalOptions="Center"
+                ></Button>
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

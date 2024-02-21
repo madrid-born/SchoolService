@@ -14,9 +14,12 @@
             <StackLayout
                 Grid.Row="0"
                 Margin="10 , 5 , 0, 0"
-                WidthRequest="200"
+                WidthRequest="450"
                 >
-                
+                <Button
+                    Text="Category"
+                    Clicked="Button_OnClicked"
+                    ></Button>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

@@ -18,4 +18,5 @@ public partial class SchoolAdvertise : ContentPage
     {
         await Navigation.PushAsync(new CategoryTypes());
     }
+    
 }

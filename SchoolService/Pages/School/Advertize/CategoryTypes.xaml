@@ -14,10 +14,8 @@
                     <ViewCell>
                         <Grid
                             Margin="5 ,  5 ,0, 5 "
-                            >
-                            <Button
-                                Text="{Binding Name}"
-                                ></Button>
+                        >
+                            <Button Text="Category" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
