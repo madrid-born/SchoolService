@@ -14,7 +14,7 @@ public partial class SchoolChat : ContentPage
     {
         InitializeComponent();
         _connection = new HubConnectionBuilder()
-            .WithUrl("http://192.168.1.50:5172/chat")
+            .WithUrl("http://192.168.25.41:5172/chat")
             .Build();
         _connection.On<string>("MessageRecieved" , (message) =>
         {
@@ -23,14 +23,14 @@ public partial class SchoolChat : ContentPage
         Task.Run(() =>
             {
                 Dispatcher.Dispatch(async () =>
-                    await _connection.StartAsynch());
+                    await _connection.StartAsync());
             }
         );
     }
 
     private async void SendMessage_OnClicked(object sender, EventArgs e)
     {
-        await _connection.InvokeCoreAsync("SendMessage" , EventArgs: new[]{MyChatMessage.Text});
+        await _connection.InvokeCoreAsync("SendMessage" , args: new[]{MyChatMessage.Text});
         MyChatMessage.Text = String.Empty;
     }
 }
