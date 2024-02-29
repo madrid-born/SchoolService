@@ -14,23 +14,39 @@ public partial class SchoolChat : ContentPage
     {
         InitializeComponent();
         _connection = new HubConnectionBuilder()
-            .WithUrl("http://192.168.25.41:5172/chat")
+            //write your ip address in here 
+            .WithUrl("http://192.168.91.41:5172/chat")
+            .WithAutomaticReconnect()
             .Build();
-        _connection.On<string>("MessageRecieved" , (message) =>
+        _connection.On<string>("MessageReceived" , (message) =>
         {
-            chatMessages.Text += $"{Environment.NewLine}{message}";
+            ChatMessage.Text += $"{Environment.NewLine}{message}";
         });
-        Task.Run(() =>
-            {
-                Dispatcher.Dispatch(async () =>
-                    await _connection.StartAsync());
-            }
-        );
+        
+        
+
+         Task.Run(() =>
+             {
+                 Dispatcher.Dispatch(async () =>
+                     await _connection.StartAsync());
+             }
+         );
+
     }
 
     private async void SendMessage_OnClicked(object sender, EventArgs e)
     {
-        await _connection.InvokeCoreAsync("SendMessage" , args: new[]{MyChatMessage.Text});
-        MyChatMessage.Text = String.Empty;
+        try
+        {
+            object[] obj = new object[] { MyChatMessage.Text };
+
+            await _connection.InvokeCoreAsync("SendMessage" , args: obj);
+            MyChatMessage.Text = String.Empty;
+        }
+        catch (Exception exception)
+        {
+            DisplayAlert("w", exception.ToString(), "s");
+        }
     }
+    
 }

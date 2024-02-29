@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <VerticalStackLayout>
             <Label
-                x:Name="chatMessages"
+                x:Name="ChatMessage"
                 Text="ChatMessages"
                 FontSize="18"
                 HorizontalOptions="Center"
@@ -23,6 +23,11 @@
                 Clicked="SendMessage_OnClicked"
                 HorizontalOptions="Center"
                 ></Button>
+            <Entry
+                x:Name="Error"
+                Placeholder="error"
+                HorizontalOptions="Center"
+                ></Entry>
         </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>
